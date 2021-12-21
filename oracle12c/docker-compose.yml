@@ -1,0 +1,18 @@
+version: "3.7"
+services: 
+  
+  orcl12c:
+    build: 
+      context: .
+    environment: 
+      ORACLE_SID: ORCL 
+      ORACLE_PDB: ORCLPBD 
+      ORACLE_PWD: System#1 
+      ORACLE_CHARACTERSET: WE8MSWIN1252
+    volumes: 
+      - ora_data:/opt/oracle/oradata
+    ports: 
+      - "1521:1521"
+
+volumes: 
+  ora_data:

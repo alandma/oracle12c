@@ -1,0 +1,9 @@
+version: "3.7"
+services: 
+  
+  oracle12c:
+    build: 
+      context: 12.2.0.1
+      args: 
+        DB_EDITION: se2
+    image: oracle12c:12.2.0.1
